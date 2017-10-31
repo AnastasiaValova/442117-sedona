@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Anastasia Valova](https://up.htmlacademy.ru/htmlcss/19/user/442117).
-* Наставник: `Неизвестно`.
+* Наставник: `Антон Попов (https://htmlacademy.ru/profile/joker)`.
 
 ---
 

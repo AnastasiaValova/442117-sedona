@@ -9,24 +9,29 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
-        <img src="img/logo.svg" width="10" height="50" alt="Sedona">
+        <img src="img/main-logo.png" width="10" height="50" alt="Логотип">
       </a>
 			<ul>
-        <li><a href="" class="active-href">Информация</a></li>
-        <li><a href="">Фото и видео</a></li>
-        <li><a href="">Карта штата</a></li>
-        <li><a href="">Гостиницы</a></li>
+        <li><a class="active-href">Информация</a></li>
+        <li><a href="fotos.html">Фото и видео</a></li>
+        <li><a href="map.html">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
 
 <main>
   <section class="header">
-    <!-- фоновое изображение с помощью css -->
-    <span class="welcome">Welcome</span>
-    <span class="gorgeous">to the gorgeous</span>
-    <span class="sedona">Sedona</span>
-    <span class="canyon">"Because the Grand Canyon sucks!"</span>
+    <!--- фотоновая картинка будет --->
+    <img src="img/welcome.svg" alt="welcome">
+    <img src="img/gorgeous.svg" alt="to the gordeous">
+    <img src="img/Sedona.svg" alt="Sedona">
+    <img src="img/GrandCanyon.svg" alt="because the Garnd Canyon sucks">
+
+    <span class="welcome"></span>
+    <span class="gorgeous"></span>
+    <span class="sedona"></span>
+    <span class="canyon"></span>
   </section>
 
   <section class="features">
@@ -39,7 +44,7 @@
      <h3>Настоящий городок</h3>
      <span>-№1-</span>
      <p>Седона - не аттрацион для туристов, там течет своя жизнь</p>
-	   <img src="http://placehold.it/150x100" width="10" height="10" alt="A beautiful house">
+	   <img src="img/pic1.jpg" width="50" height="50" alt="A beautiful house">
    </section>
 
 	 <section class="option-list">
@@ -66,7 +71,7 @@
      <h3>Там есть мост дьявола</h3>
      <span>-№2-</span>
      <p>Да, по нему можно пройтись, если, конечно, вы осмелитесь</p>
-	   <img src="http://placehold.it/150x100" alt='The Bridge of Devil'>
+	   <img src="img/pic2.jpg" width="50" height="50" alt='The Bridge of Devil'>
 	 </section>
 
 	 <section class="feature-items">
@@ -93,32 +98,38 @@
      <h1>Заинтересовались?</h1>
      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-     <form class="form">
+     <form class="form" method="get" action="https://echo.htmlacademy.ru">
        <span>Дата заезда</span><input type="date" name="calendar" value="2017-04-24">
        <span>Дата выезда</span><input type="date" name="calendar" value="2017-07-04">
-       <span>Взрослые</span><input>
-       <span>Дети</span><input>
+       <span>Взрослые</span>
+       <span class="minus">-</span>
+       <input type="text" value="1">
+       <span class="plus">+</span>
+       <span>Дети</span>
+       <span class="minus">-</span>
+       <input type="text" value="1">
+       <span class="plus">+</span>
        <button type="submit" class="button">Найти</button>
      </form>
    </section>
 
 	 <section>
-     <img class="map" src="img/map.svg" width="100" height="50" alt="A map">
+     <img class="map" src="img/map.jpg" width="100" height="50" alt="A map">
 	 </section>
 	</main>
 
   <footer class="main-footer">
     <div class="tag"> #visitsedona </div>
     <div class='social-nets'>
-      <a href"" class="twitter"></a>
-      <a href"" class="fb"></a>
-      <a href"" class="youtube"></a>
+      <a href="twitter.com" class="twitter"></a>
+      <a href="facebook.com" class="fb"></a>
+      <a href="youtube.com" class="youtube"></a>
     </div>
 
     <div class="website-by">
       <p>Webside by
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/map.svg" width="100" height="50" alt="HTML Academy">
+          <span class="logoAcademy"></span>
         </a>
       </p>
     </div>

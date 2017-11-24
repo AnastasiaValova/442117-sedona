@@ -8,9 +8,10 @@
 </head>
 
 <body>
-  <header class="main-header">
+  <div class="wrap">
+    <header>
     <nav class="main-navigation">
-			<ul class="breadcrumb">
+			<ul class="navigation">
         <li><a class="active-href">Информация</a></li>
         <li><a href="photos.html">Фото и видео</a></li>
         <li><a class="main-header-logo" href="index.html">
@@ -22,15 +23,15 @@
     </nav>
   </header>
 
-<main>
-  <section class="header background-image">
+  <main>
+    <section class="header mountains-index">
     <!-- фотоновая картинка будет -->
-    <img src="img/header.png" width="458" height="352" alt="welcome to the gordeous Sedona because the Garnd Canyon sucks">
+    <img class="img-inscription" src="img/header.png" width="458" height="352" alt="welcome to the gordeous Sedona because the Garnd Canyon sucks">
     <!-- картинка с треугольной формой внизу гор -->
-  </section>
+    </section>
 
   <section class="features">
-	  <h1 aria-hidden="true">5 причин крутости Седоны</h1>
+	  <h1 hidden aria-label="5 причин крутости Седоны">5 причин крутости Седоны</h1>
 	  <h2>Седона - небольшой город в Аризоне, заслуживающий большего!</h2>
 	  <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
 	 </section>
@@ -44,18 +45,15 @@
 
 	 <section class="options">
      <ul class="option-list">
-       <li>
-         <div class="house"></div>
+       <li class="house">
 	       <h3>Жилье</h3>
 	       <p>Рекомендуем пожить в настоящем мотеле, все как в кино</p>
        </li>
-       <li>
-         <div class="food"></div>
+       <li class="food">
 	       <h3>Еда</h3>
 	       <p>Всегда заказывайте фирменный бургер</p>
        </li>
-       <li>
-         <div class="gifts"></div>
+       <li class="gifts">
 	       <h3>Сувениры</h3>
 	       <p>Не только китайского, но и мместного производства</p>
        </li>
@@ -113,7 +111,7 @@
    </section>
 
 	 <section class="map">
-     <img src="img/map.jpg" width="1199.96px" height="100%" alt="A map">
+     <img src="img/map.jpg" width="100%" height="100%" alt="A map">
 	 </section>
 	</main>
 
@@ -133,4 +131,5 @@
       </p>
     </div>
   </footer>
+</div>
   </body>

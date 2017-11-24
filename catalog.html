@@ -9,15 +9,15 @@
 </head>
 
 <body>
-
+  <div class="wrap">
 <header class="main-header">
   <nav class="main-navigation">
-    <a class="main-header-logo" href="index.html">
-      <img src="img/main-logo.png" width="138" height="70" alt="Логотип">
-    </a>
-    <ul class="breadcrumb">
+    <ul class="navigation">
       <li><a href="index.html">Информация</a></li>
       <li><a href="photos.html">Фото и видео</a></li>
+      <li><a class="main-header-logo" href="index.html">
+        <img src="img/main-logo.png" width="138" height="70" alt="Логотип">
+      </a></li>
       <li><a href="map.html">Карта штата</a></li>
       <li><a class="active-href">Гостиницы</a></li>
     </ul>
@@ -25,7 +25,7 @@
 </header>
 
 <main>
-  <h2 aria-hidden="true">Критерии</h2>
+  <h2 hidden area-label="Критерии">Критерии</h2>
   <section class="options">
   <!-- фоновая картинка с помощью css -->
       <form class="form" method="get" action="https://echo.htmlacademy.ru">
@@ -60,10 +60,10 @@
 
 	 <section class="result">
      <h2>Найдено: 3</h2>
-     <div class="sort-options">
+     <div class="sort">
        <span>Сортировка</span>
-       <ul>
-         <li><a href="">по цене</a></li>
+       <ul class="sort-options">
+         <li><a class="active" href="">по цене</a></li>
          <li><a href="">по типу</a></li>
          <li><a href="">по рейтингу</a></li>
          <li><a href="">треугольник</a></li>
@@ -122,4 +122,5 @@
     </p>
   </div>
 </footer>
+</div>
 </body>

@@ -136,7 +136,7 @@ a {
   color: #766357;
 }
 
-.options {
+.accomodation-options {
   width: 100%;
   height: 218px;
   background-image:url("../img/background.jpg");
@@ -191,4 +191,13 @@ a {
 .book:active {
   background-color: #503e33;
   opacity: 0.3;
+}
+
+
+
+
+body {
+  background-size: 1372 auto;
+  background-image: url("background-image.jpg");
+  background-repeat: no-repeat;
 }

@@ -269,19 +269,8 @@ a {
   opacity: 0.3;
 }
 
-input[type="checkbox"] {
-    display: none;
-}
-
-html,
 body {
-  min-width: 1222px;
-  min-height: 2750px;
-}
-
-body {
-
-  background-image: url("../img/sedona-index-1200.jpg");
+  background-size: 1372px auto;
+  background-image: url("background-image.jpg");
   background-repeat: no-repeat;
-  background-position: top center ;
 }

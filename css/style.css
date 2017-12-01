@@ -7,6 +7,8 @@ body {
   text-transform: uppercase;
   background-color: #f2f2f2;
 }
+
+/*------ обертка всего, чтобы создать тень -----*/
 .wrap {
   background-color: #ffffff;
   box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
@@ -89,7 +91,7 @@ a {
   background-color: #e1edf6;
   background-repeat: no-repeat, no-repeat;
   background-size: 100%, 100%;
-  background-position: bottom, top;
+  background-position: bottom, 0 -55px;
 }
 .img-inscription {
   display: block;
@@ -115,13 +117,13 @@ a {
 }
 .features {
   margin-top: 60px;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   width: 500px;
   text-align: center;
 }
-.features h3 {
+.features h2 {
     line-height: 1.2em;
 }
 .feature-item {
@@ -200,32 +202,7 @@ a {
 .map {
 
 }
-.main-footer {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-}
-.main-index-footer {
-    margin-top: -50px;
-  z-index: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  position: relative;
-}
-.tag {
-  line-height: 26px;
-  font-weight: 700;
-}
-.twitter {
-  /* width: 46px;
-  height: 48px;
-  background-image: url("../img/twitter.svg");
-  background-repeat: no-repeat;
-  background-color: red; */
-}
-.logo-academy {
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-}
+
 
 
 .active-href {
@@ -294,6 +271,36 @@ a {
   padding: 9px 17px;
   color: #ffffff;
 }
+.test {
+    position: relative;
+    display: inline-block;
+    max-width: 100px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+.test::before,
+.test::after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+.test::before {
+    top: 7px;
+    left: 8px;
+    width: 32px;
+    height: 1px;
+    border-top: 1px solid #5a5a5a;
+}
+
+.test::after {
+    top: 0;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 2px solid #5a5a5a;
+    border-radius: 50%;
+}
 .more {
   background-color: #81b3d2;
 }
@@ -314,6 +321,76 @@ a {
   background-color: #503e33;
   opacity: 0.3;
 }
+
+
+.main-index-footer {
+  margin-top: -120px;
+  z-index: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+/*------------- Футер для всех страниц ----------- */
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-footer a, p, span{
+  margin: 0px;
+  padding: 0px;
+}
+.main-footer div {
+    width: 33.3%;
+    text-align: center;
+    padding: 36px 0;
+}
+.tag {
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+.twitter {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
+  background-position: 50% 50%;
+}
+.fb {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-image: url("../img/fb.svg");
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
+  background-position: 50% 50%;
+}
+.youtube {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-image: url("../img/youtube.svg");
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
+  background-position: 50% 50%;
+}
+.website-by .website::after {
+  content: "";
+  display: inline-block;
+  width: 115px;
+  height: 41px;
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  vertical-align: center;
+
+
+}
+
+
+
 
 body {
   background-size: 1372px auto;

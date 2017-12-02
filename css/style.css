@@ -238,13 +238,13 @@ a {
 .input-row label {
   font-weight: bold;
 }
-.input-row input {
+.input-row input[type="text"] {
   position: absolute;
   right: 58px;
   width: 346px;
   height: 38px;
-    background-color: #f2f2f2;
-    border: none;
+  background-color: #f2f2f2;
+  border: none;
 }
 input[placeholder] {
   font-size: 14px;
@@ -266,6 +266,39 @@ input[placeholder] {
   border: none;
   background-color: #81b3d2;
   color: #ffffff;
+}
+
+.minus, .plus {
+  font-size: 0;
+  border: none;
+  border-radius: 0;
+  padding: 19px;
+  background-color: #f2f2f2;
+  position: relative;
+}
+.minus::before , .minus::after, .plus::before , .plus::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 13px;
+  width: 12px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+.plus::after {
+  transform: rotate(90deg);
+}
+
+.minus:hover::before, .plus:hover::before, .minus:hover::after, .plus:hover::after {
+  background-color: orange;
+}
+input[type="number"] {
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+  text-align: center;
+  vertical-align: center;
 }
 .map {
 

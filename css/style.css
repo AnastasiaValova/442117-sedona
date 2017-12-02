@@ -130,7 +130,7 @@ a {
   display: flex;
   max-height: 256px;
   justify-content: space-between;
-  align-items: center;
+
   text-align: center;
   color: #ffffff;
   background-color: #81b3d2;
@@ -138,6 +138,13 @@ a {
 }
 .div-item {
   width: 33.3%;
+}
+.div-item h3 {
+  margin-top: 49px;
+  margin-bottom: 30px;
+}
+.div-item p {
+  margin-top: 30px;
 }
 .img-item {
   width: 66.6%;
@@ -150,7 +157,7 @@ a {
   text-align: center;
   background-color: #eeeeee;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .features-group ul {
   text-align: center;
@@ -160,8 +167,23 @@ a {
   padding-top: 50px;
   padding-bottom: 30px;
 }
+.features-group p {
+  width: 264px;
+  margin: 0px;
+  padding-top: 30px;
+  padding-bottom: 65px;
+}
 .interest {
-  text-align: center;
+    text-align: center;
+  position: relative;
+}
+.interest p {
+  display: block;
+  width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 43px;
+
 }
 .options {
     min-height: 330px;
@@ -199,6 +221,52 @@ a {
   display: flex;
   flex-direction:column;
 }
+.form {
+  position: absolute;
+  left: 20%;
+  background-color: #ffffff;
+  padding: 50px 55px;
+  text-align: left;
+  width: 468px;
+}
+.interest .input-row {
+  font-size: 14px;
+  line-height: 1.8em;
+  margin-top: 29px;
+
+}
+.input-row label {
+  font-weight: bold;
+}
+.input-row input {
+  position: absolute;
+  right: 58px;
+  width: 346px;
+  height: 38px;
+    background-color: #f2f2f2;
+    border: none;
+}
+input[placeholder] {
+  font-size: 14px;
+  font-weight: bold;
+}
+.calendar {
+  position: absolute;
+  width: 21px;
+  height: 22px;
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  right: 65px;
+  border: none;
+}
+.input-row-adult, .input-row-children {
+  display: inline-block;
+}
+.button-find {
+  border: none;
+  background-color: #81b3d2;
+  color: #ffffff;
+}
 .map {
 
 }
@@ -217,19 +285,131 @@ a {
   background-repeat: no-repeat;
   background-size: 100%;
   color: #ffffff;
+  background-position: 0px -300px;
 }
-.form {
+.catalog-form {
   display: flex;
 }
 .result {
 }
-
-.price {
-  flex-grow: 1;
+.infrastructure {
+  width: 20%;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+.accommodation input[type="checkbox"] + label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image:url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px 0px;
+}
+/*---------- Ползунки на странице отелей ---------*/
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.price {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 80%;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.button-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.button-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+/*------------------*/
 .sort {
   display: flex;
+  padding: 36px 73px;
 }
 .sort-options {
 
@@ -253,6 +433,20 @@ a {
 .up-down {
   text-align: right;
   flex-grow: 1;
+}
+.down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 11px solid #81b3d2;
+}
+.up {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 11px solid #cacaca;
 }
 .stars {
   text-align: right;

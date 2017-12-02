@@ -4,6 +4,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 </head>
@@ -28,34 +29,57 @@
   <h2 hidden area-label="Критерии">Критерии</h2>
   <section class="accomodation-options">
   <!-- фоновая картинка с помощью css -->
-      <form class="form" method="get" action="https://echo.htmlacademy.ru">
+      <form class="catalog-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="infrastructure">
           <h3>Инфраструктура</h3>
-          <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
-          <label for="swimming-pool">Бассейн</label>
-          <input type="checkbox" name="parking-place" id="parking-place">
-          <label for="parking-place">Парковка</label>
-          <input type="checkbox" name="wi-fi" id="wi-fi">
-          <label for="wi-fi">Wi-Fi</label>
+          <div>
+            <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+            <label for="swimming-pool">Бассейн</label>
+          </div>
+          <div>
+            <input type="checkbox" name="parking-place" id="parking-place">
+            <label for="parking-place">Парковка</label>
+          </div>
+          <div>
+            <input type="checkbox" name="wi-fi" id="wi-fi">
+            <label for="wi-fi">Wi-Fi</label>
+          </div>
         </fieldset>
         <fieldset class="accommodation">
           <h3>Тип жилья</h3>
-          <input type="checkbox" name="hotel" id="hotel" checked>
-          <label for="hotel">Гостиница</label>
-          <input type="checkbox" name="motel" id="motel" checked>
-          <label for="hotel">Мотель</label>
-          <input type="checkbox" name="apartments" id="apartments" checked>
-          <label for="apartments">Аппартаменты</label>
+          <div>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
+          </div>
+          <div>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="hotel">Мотель</label>
+          </div>
+          <div>
+            <input type="checkbox" name="apartments" id="apartments" checked>
+            <label for="apartments">Аппартаменты</label>
+          </div>
         </fieldset>
         <fieldset class="price">
           <h3>Стоимость в сутки (Р)</h3>
-          <input type="text" name="low-price" placeholder="от 0">
-          <label class="test" for="low-price"></label>
-          <input type="text" name="high-price" placeholder="до 3000">
-          <!-- Тут будет код для бегунка -->
-          <div></div>
+          <div class="price-controls">
+            <label class="min-price" for="low-price">от
+              <input type="text" name="low-price" value="0">
+            </label>
+            <label class="max-price" for="hight-price">до
+              <input type="text" name="high-price" value="3000">
+            </label>
+          </div>
+          <div class="range-controls">
+          <div class="scale">
+            <div class="bar"></div>
+          </div>
+          <div class="range-toggle range-toggle-min"></div>
+          <div class="range-toggle range-toggle-max"></div>
+        </div>
+        <button class="button-transparent" type="submit">Показать</button>
         </fieldset>
-        <button type="submit">Показать</button>
+
       </form>
     </section>
 
@@ -69,8 +93,9 @@
          <li><a href="">по типу</a></li>
          <li><a href="">по рейтингу</a></li>
        </ul>
-       <span class="up-down"><li><a href="">треугольник</a></li>
-       <li><a href="">треугольник</a></li></span>
+       <span class="up-down">
+         <a href="" class="up"></a></li>
+         <a href="" class="down"></a></li></span>
      </div>
    </section>
 

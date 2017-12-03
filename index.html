@@ -162,10 +162,19 @@
  /*----------появление/исчезновение формы по клику на кнопку-------------*/
  search.addEventListener("click", function (evt) {
  evt.preventDefault();
- form.classList.toggle("invisible");
+ if(document.querySelector(".invisible"))
+    { form.classList.remove("invisible");
+      form.classList.add("visible"); console.log("visible");}
+  else
+    {form.classList.remove("visible");
+      form.classList.add("invisible"); console.log("invisible");}
+  });
+
+
+ /*form.classList.toggle("invisible");
  indexform.classList.remove("form-error");
  console.log(indexform.value);
- });
+});*/
 
  var indexform = document.querySelector(".index-form");
 

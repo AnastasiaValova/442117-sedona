@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
@@ -102,29 +102,25 @@
      <button class="search">Поиск гостиницы в Седоне</button>
      <div class="form"><form class="index-form" method="get" action="https://echo.htmlacademy.ru">
        <div class="input-row">
-         <label for"from">Дата заезда:</label>
-         <input type="text" name="calendar" id="from" placeholder="24 апреля 2017">
+         <label for="from">Дата заезда:</label>
+         <input type="text" name="calendar1" id="from" placeholder="24 апреля 2017">
          <button class="calendar"></button> <!-- для кликабельного календарика -->
        </div>
        <div class="input-row">
-         <label for"to">Дата выезда:</label>
-         <input type="text" name="calendar" id="to" placeholder="4 июля 2017">
+         <label for="to">Дата выезда:</label>
+         <input type="text" name="calendar2" id="to" placeholder="4 июля 2017">
          <button class="calendar"></button> <!-- для кликабельного календарика -->
        </div>
        <div class="input-row">
-         <div class="input-row-adult">
-           <label for="adults">Взрослые:</label>
+           <label class="adults" for="adults">Взрослые:</label>
            <button class="minus">-</button>
-           <input type="number" min="1" id="adults" placeholder="1">
+           <input type="number" min="1" id="adults" placeholder="2">
            <button class="plus">+</button>
-         </div>
 
-         <div class="input-row-children">
-           <lavel for"children">Дети:</label>
-             <button class="minus">-</button>
-             <input type="number" min="0" id="children" placeholder="1">
-             <button class="plus">+</button>
-           </div>
+           <label class="child" for="children">Дети:</label>
+           <button class="minus">-</button>
+           <input type="number" min="0" id="children" placeholder="0">
+           <button class="plus">+</button>
          </div>
          <button type="submit" class="button-find">Найти</button>
      </form>
@@ -132,7 +128,7 @@
    </section>
 
    <section class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d609919.8305865142!2d-112.20193968931919!3d34.870203512093305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1511989528685" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d609919.8305865142!2d-112.20193968931919!3d34.870203512093305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1511989528685" width="100%" height="593px" frameborder="0" style="border:0" allowfullscreen></iframe>
    </section>
   </main>
 
@@ -141,19 +137,59 @@
     <div class="main-footer">
       <div class="tag"> <span>#visitsedona</span> </div>
       <div class="social-nets">
-        <a href="twitter.com" class="twitter">Твиттер</a>
-        <a href="facebook.com" class="fb">Фейсбук</a>
-        <a href="youtube.com" class="youtube">Ютуб</a>
+        <a href="https://twitter.com/htmlacademy_ru" class="twitter">Твиттер</a>
+        <a href="https://www.facebook.com/htmlacademy" class="fb">Фейсбук</a>
+        <a href="https://www.youtube.com/user/htmlacademyru" class="youtube">Ютуб</a>
       </div>
 
       <div class="website-by">
-        <p>Webside by
-          <a class="website" href="https://htmlacademy.ru/intensive/htmlcss">
-          </a>
-        </p>
+        Webside by <a class="website" href="https://htmlacademy.ru/intensive/htmlcss"></a>
       </div>
     </div>
   </footer>
 
 </div>
+<script>
+
+ var search = document.querySelector(".search");
+ var form = document.querySelector(".form");
+
+ var storageadults = localStorage.getItem("adults");
+ var storagechildren = localStorage.getItem("children");
+
+
+
+ /*----------появление/исчезновение формы по клику на кнопку-------------*/
+ search.addEventListener("click", function (evt) {
+ evt.preventDefault();
+ form.classList.toggle("invisible");
+ indexform.classList.remove("form-error");
+ console.log(indexform.value);
+ });
+
+ var indexform = document.querySelector(".index-form");
+
+ var from = indexform.querySelector("[id=from]");
+ var to = indexform.querySelector("[id=to]");
+ var adults = indexform.querySelector("[id=adults]");
+ var children = indexform.querySelector("[id=children]");
+
+var find = document.querySelector(".index-form");
+
+/*----------Проверка на зоплненность всех полей формы--------------*/
+find.addEventListener("submit", function (evt) {
+ if(!from.value || !to.value || !adults.value || !children.value ) {
+  evt.preventDefault();
+  indexform.classList.remove("form-error");
+  indexform.offsetWidth = indexform.offsetWidth;
+  indexform.classList.add("form-error");
+  console.log("here1");
+ }
+ else {
+  localStorage.setItem("adults", from.value);
+  localStorage.setItem("children", to.value);
+  console.log("here");
+}});
+</script>
   </body>
+</html>

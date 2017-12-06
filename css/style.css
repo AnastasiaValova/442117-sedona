@@ -74,13 +74,14 @@ a {
   color: #000000;
 }
 
-
+.sort-options a:hover, .navigation a:hover:not(.active-href) {
+    color: #81b3d2;
+  }
 .navigation a:focus {
   color: #81b3d2;
 }
 .navigation a:active {
-  color: #000000;
-  opacity: 30%;
+  color: #cacaca;
 }
 
 .navigation .active-href {
@@ -171,7 +172,9 @@ a {
   height: 88.5%;
   transform: translateY(-19.5%);
 }
-
+button {
+  font-family: "PT Sans", Arial, sans-serif;
+}
 .features-group ul {
   list-style: none;
   text-align: center;
@@ -204,6 +207,7 @@ a {
 .interest h1 {
   margin-top: 0;
   margin-bottom: 34px;
+  letter-spacing: 1.3px;
 }
 .interest p {
   display: block;
@@ -280,37 +284,34 @@ a {
 
 .input-row label {
   font-weight: bold;
+  letter-spacing: 0.3px;
 }
 .input-row input[type="text"] {
 
   right: 58px;
-  width: 346px;
-  height: 38px;
+  width: 333px;
+  height: 34px;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
+  padding-left: 11px;
 }
 .input-row input[type="text"]:hover {
   background-color: #ebebeb;
 }
 .input-row input[type="text"]:focus {
   background-color: white;
-
   border: 2px solid #ebebeb;
-
 }
-
-
 input[placeholder] {
   font-size: 14px;
   line-height: 1.85em;
   font-weight: bold;
-  padding-left: 10px;
 }
 .calendar{
   position: absolute;
   width: 21px;
   height: 22px;
-  background-color: #f2f2f2;
+  background-color: transparent;;
   background-repeat: no-repeat;
   right: 71px;
   border: none;
@@ -447,20 +448,24 @@ fieldset {
 .infrastructure h3 {
   font-size: 16px;
 line-height: : 21px;
-margin-top: 21px;
-margin-left: 56px;
+margin-top: 22px;
+margin-left: 43px;
+letter-spacing: 0.2px;
 }
 .accommodation h3 {
   font-size: 16px;
 line-height: 21px;
 margin-top: 23px;
-margin-left: 43px;
+margin-left: 17px;
 }
-.infrastructure div,
+.infrastructure div {
+  margin-left: 64px;
+  margin-top: 11%;
+  margin-bottom: 11%;
+}
 .accommodation div {
-  margin-left: 67px;
-margin-top: 8px;
-display: inline-block;
+    margin-top: 5.5%;
+        padding-left: 44px;
 }
 .accommodation {
   width: 40%;
@@ -477,11 +482,13 @@ display: inline-block;
   content: "";
     display: inline-block;
       position: absolute;
-        left: 55px;
 }
 .infrastructure label::before {
-
   left: 55px;
+}
+.accommodation label::before
+{
+  left: 29px;
 }
 
 
@@ -541,7 +548,7 @@ display: inline-block;
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 30px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -555,11 +562,15 @@ display: inline-block;
 .price h3 {
   margin-top: 23px;
   margin-bottom: 10px;
+  letter-spacing: 0.1px;
 }
-.price-controls .min-price,
-.price-controls .max-price {
+.price-controls .min-price {
   width: 90px;
   padding-left: 65px;
+}
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 53px;
 }
 .range-controls .bar {
   width: 80%;
@@ -589,7 +600,7 @@ display: inline-block;
   left: 0;
 }
 .range-toggle-max {
-  left: 77%;
+  left: 80%;
 }
 .range-toggle:hover {
   background: #1c4f80;
@@ -597,8 +608,7 @@ display: inline-block;
 .button-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 32px;
-
+  padding: 6px 31px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -643,7 +653,7 @@ display: inline-block;
 }
 .sort-options li {
   display: inline-block;
-  padding-right: 34px;
+  padding-right: 30px;
     font-size: 12px;
 }
 .sort-options a:hover:not(.active),
@@ -688,6 +698,7 @@ display: inline-block;
 	border-right: 5.5px solid transparent;
 	border-bottom: 10px solid #cacaca;
   border-top: 0px;
+  margin-right: 12px;
 }
 .up:hover,
 .up:focus {

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
   <div class="wrap">
     <header>
     <nav class="main-navigation">
@@ -44,7 +45,7 @@
      <div class="div-item">
        <h3>Настоящий городок</h3>
        <span>— №1 —</span>
-       <p>Седона — не аттракцион для туристов, там &nbsp; течет своя жизнь</p>
+       <p>Седона — не аттракцион для туристов, там&nbsp;течет своя жизнь</p>
      </div>
      <img class="img-item" src="img/city.jpg" width="800" height="400" alt="A beautiful house">
    </section>
@@ -153,64 +154,6 @@
   </footer>
 
 </div>
-<script>
-
- var search = document.querySelector(".search");
- var form = document.querySelector(".form");
-
- var storageadults = localStorage.getItem("adults");
- var storagechildren = localStorage.getItem("children");
-
- var indexform = document.querySelector(".index-form");
-
- var from = indexform.querySelector("[id=from]");
- var to = indexform.querySelector("[id=to]");
- var adults = indexform.querySelector("[id=adults]");
- var children = indexform.querySelector("[id=children]");
-
- form.classList.add("invisible");
-
- if(storageadults) {
-    adults.value = storageadults; console.log("adults");
- }
- if(storagechildren) {
-    children.value = storagechildren; console.log("children");
- }
-
- /*----------появление/исчезновение формы по клику на кнопку-------------*/
- search.addEventListener("click", function (evt) {
- evt.preventDefault();
-
- if(document.querySelector(".invisible"))
-    { form.classList.remove("invisible");
-      form.classList.add("visible"); console.log("visible");}
-  else
-    {form.classList.remove("visible");
-      form.classList.add("invisible"); console.log("invisible");}
-  });
-
-
- /*form.classList.toggle("invisible");
- indexform.classList.remove("form-error");
- console.log(indexform.value);
-});*/
-
-
-var find = document.querySelector(".index-form");
-/*----------Проверка на зоплненность всех полей формы--------------*/
-find.addEventListener("submit", function (evt) {
- if(!from.value || !to.value || !adults.value || !children.value ) {
-  evt.preventDefault();
-  indexform.classList.remove("form-error");
-  indexform.offsetWidth = indexform.offsetWidth;
-  indexform.classList.add("form-error");
-  console.log("here1");
- }
- else {
-  localStorage.setItem("adults", adults.value);
-  localStorage.setItem("children", children.value);
-  console.log("here");
-}});
-</script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -490,16 +490,12 @@ margin-left: 17px;
 {
   left: 29px;
 }
-
-
 .infrastructure input[type="checkbox"] + label::before,
 .accommodation input[type="checkbox"] + label::before {
   content: url("../img/checkbox-off.svg");
   height: 19px;
   width: 19px;
 }
-
-/*Unhide on the checked state*/
 .infrastructure  input[type="checkbox"]:checked + label::before,
 .accommodation  input[type="checkbox"]:checked + label::before {
     content: "";
@@ -511,13 +507,17 @@ margin-left: 17px;
     background-size: 100%;
     background-position: 0px 0px;
 }
-
-/*Adding focus styles on the outer-box of the fake checkbox*/
 .infrastructure input[type="checkbox"]:focus + label::before,
 .accommodation  input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
 }
-
+.infrastructure  input[type="checkbox"]:disabled + label::before,
+.accommodation  input[type="checkbox"]:disabled + label::before,
+.infrastructure  input[type="checkbox"]:checked:disabled + label::before,
+.accommodation  input[type="checkbox"]:checked:disabled + label::before
+{
+  opacity: 0.3;
+}
 /*---------- Ползунки на странице отелей ---------*/
 .price-controls {
   position: relative;

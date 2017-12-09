@@ -26,7 +26,7 @@
 </header>
 
 <main>
-  <h2 hidden area-label="Критерии">Критерии</h2>
+  <h2 hidden>Критерии</h2>
   <section class="accomodation-options">
   <!-- фоновая картинка с помощью css -->
       <form class="catalog-form" method="get" action="https://echo.htmlacademy.ru">
@@ -62,21 +62,21 @@
         </fieldset>
         <div class="price">
         <fieldset >
-          <h3>Стоимость в сутки (Р)</h3>
+          <h3>Стоимость в сутки (Р):</h3>
           <div class="price-controls">
             <label class="min-price" for="low-price">от
-              <input type="text" name="low-price" value="0">
+              <input type="text" id="low-price" value="0">
             </label>
-            <label class="max-price" for="hight-price">до
-              <input type="text" name="high-price" value="3000">
+            <label class="max-price" for="high-price">до
+              <input type="text" id="high-price" value="3000">
             </label>
           </div>
           <div class="range-controls">
           <div class="scale">
             <div class="bar"></div>
           </div>
-          <div class="range-toggle range-toggle-min"></div>
-          <div class="range-toggle range-toggle-max"></div>
+          <div tabindex="0" class="range-toggle range-toggle-min"></div>
+          <div tabindex="0" class="range-toggle range-toggle-max"></div>
         </div>
         </fieldset>
         <button class="button-transparent" type="submit">Показать</button>

@@ -19,10 +19,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-h3 {
-  font-size: 21px;
-  font-weight: 700;
-}
 /*-------------- Верхнее меню + логотип --------*/
 .main-navigation {
   position: relative;
@@ -34,6 +30,7 @@ h3 {
 }
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -68,16 +65,17 @@ h3 {
   line-height: 1.8em;
   color: #000000;
 }
-.sort-options a:hover, .navigation a:hover:not(.active-href) {
-    color: #81b3d2;
-  }
-.navigation a:focus {
+.sort-options a:hover,
+.navigation a:focus,
+.navigation a:hover {
   color: #81b3d2;
 }
 .navigation a:active {
   color: #cacaca;
 }
-.navigation .active-href {
+.navigation .active-href,
+.navigation .active-href:hover,
+.navigation .active-href:active {
   color: #766357;
 }
 .mountains-index {
@@ -104,6 +102,7 @@ h3 {
   font-weight: bold;
   color: #ffffff;
   border: none;
+  border-radius: 0px;
 }
 .search:hover,
 .search:focus {
@@ -257,8 +256,8 @@ button {
   box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.35);
 }
 .form input {
-  margin: 0;
   padding: 0;
+  font-family:   font-family: "PT Sans", Arial, sans-serif;
 }
 .interest .input-row {
   display: flex;
@@ -287,7 +286,7 @@ button {
   background-color: white;
   border: 2px solid #ebebeb;
 }
-input[placeholder] {
+input::placeholder {
   font-size: 14px;
   line-height: 1.85em;
   font-weight: bold;
@@ -329,6 +328,7 @@ input[placeholder] {
   font-size: 21px;
   line-height: 1.2em;
   font-weight: bold;
+  border-radius: 0px;
 }
 .button-find:hover,
 .button-find:focus  {
@@ -584,8 +584,9 @@ fieldset {
 .range-toggle-max {
   left: 80%;
 }
-.range-toggle:hover {
-  background: #1c4f80;
+.range-toggle:hover,
+.range-toggle:focus {
+  border: 10px solid #ffffff;
 }
 .button-transparent {
   display: block;

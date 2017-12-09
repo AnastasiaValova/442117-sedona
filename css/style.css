@@ -257,7 +257,7 @@ button {
 }
 .form input {
   padding: 0;
-  font-family:   font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 .interest .input-row {
   display: flex;
@@ -385,6 +385,7 @@ input[type="number"] {
 iframe {
   display: block;
   border: 0;
+  width: 100%;
 }
 .map {
   width: 100%;

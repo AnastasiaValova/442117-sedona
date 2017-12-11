@@ -1,5 +1,4 @@
 body {
-  margin: 0px 40px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5em;
@@ -17,7 +16,6 @@ body {
 }
 ul {
 
-  padding: 0;
 }
 /*-------------- Верхнее меню + логотип --------*/
 .main-navigation {
@@ -25,7 +23,6 @@ ul {
   margin: 0;
   padding: 0;
   font-size: 0;
-  margin: 0px;
   background-color: #ffffff;
 }
 .navigation {
@@ -34,6 +31,7 @@ ul {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: -70px;
+  padding: 0px 6%;
 }
 .main-header-logo {
   display: flex;
@@ -42,10 +40,17 @@ ul {
 .navigation li {
   width: 20%;
   font-weight: bold;
-  text-align: center;
+}
+.navigation li:nth-child(1),
+.navigation li:nth-child(2) {
+  text-align: left;
+}
+.navigation li:nth-child(3),
+.navigation li:nth-child(4) {
+  text-align: right;
 }
 .navigation li:nth-child(2) {
-  margin-right: 20%;
+  margin-right: 11%;
 }
 .navigation,
 .option-list,
@@ -126,7 +131,7 @@ ul {
 }
 .feature-item {
   display: flex;
-  max-height: 256px;
+  min-height: 256px;
   justify-content: space-between;
   text-align: center;
   color: #ffffff;
@@ -159,13 +164,18 @@ ul {
 button {
   font-family: "PT Sans", Arial, sans-serif;
 }
-.features-group ul {
+.group {
   margin: 0;
+  padding: 0;
   list-style: none;
   text-align: center;
   background-color: #eeeeee;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.group li {
+  width: 33%;
 }
 .features-group h3 {
   font-size: 21px;
@@ -182,6 +192,8 @@ button {
   margin: 0px;
   padding-top: 21px;
   padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .interest {
   text-align: center;
@@ -207,23 +219,29 @@ button {
 }
 .option-list {
   margin: 0;
+  padding: 0;
   position: relative;
   text-align: center;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .option-list li{
   width: 33%;
   background-repeat: no-repeat;
   background-position: center;
-  flex-basis: 285px;
-    padding-top: 162px;
+  padding-top: 162px;
 }
 .option-list h3{
   font-size: 21px;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 25px;
+}
+.option-list p {
+  width: 285px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .option-list .house {
   background-image: url("../img/feature-1.svg");
@@ -400,7 +418,7 @@ button {
 }
 .accomodation-options {
   width: 100%;
-  height: 217px;
+  min-height: 217px;
   background-image:url("../img/index-background.jpg");
   background-color: #355266;
   background-repeat: no-repeat;
@@ -419,39 +437,45 @@ button {
 fieldset {
 /*  border: none;*/
 }
+.catalog-form,
+.result,
+.catalog-item {
+  padding: 0px 6%;
+}
 .infrastructure {
   position: relative;
-  margin-left: 19px;
   width: 20%;
-  margin-right: 27px;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 .infrastructure h3 {
+  padding: 0;
   font-size: 16px;
   font-weight: 700;
   line-height: : 21px;
   margin-top: 22px;
-  margin-left: 43px;
   letter-spacing: 0.2px;
 }
 .accommodation h3 {
+  padding: 0px 18px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   margin-top: 23px;
-  margin-left: 17px;
 }
-.infrastructure div {
-  margin-left: 64px;
-  margin-top: 11%;
-  margin-bottom: 11%;
-}
+.infrastructure div,
 .accommodation div {
-  margin-top: 5.5%;
-  padding-left: 44px;
+  margin-top: 24px;
 }
 .accommodation {
   width: 40%;
   position: relative;
+}
+.infrastructure label {
+    margin-left: 23px;
+}
+.accommodation label {
+    margin-left: 44px;
 }
 .infrastructure input[type="checkbox"],
 .accommodation input[type="checkbox"] {
@@ -465,10 +489,10 @@ fieldset {
   position: absolute;
 }
 .infrastructure label::before {
-  left: 55px;
+  left: 0px;
 }
 .accommodation label::before {
-  left: 29px;
+  left: 30px;
 }
 .infrastructure input[type="checkbox"] + label::before,
 .accommodation input[type="checkbox"] + label::before {
@@ -536,12 +560,11 @@ fieldset {
   width: 330px;
   color: #ffffff;
   text-transform: uppercase;
-  margin-left: 19px;
-      margin-right: 72px;
+  margin-left: 55px;
 }
 .price h3 {
   font-weight: 700;
-  margin-top: 23px;
+  margin-top: 21px;
   margin-bottom: 10px;
   letter-spacing: 0.1px;
 }
@@ -600,7 +623,7 @@ fieldset {
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
-  margin-top: -10px
+  margin-top: -9px
 }
 .button-transparent:hover {
   color: #000000;
@@ -610,7 +633,7 @@ fieldset {
 .sort {
   display: flex;
   align-items: baseline;
-  padding: 28px 71px 26px 73px;
+  padding: 28px 0px 26px 0px;
 }
 .sort h2 {
   margin: 0;
@@ -640,7 +663,6 @@ fieldset {
 .sort-options a:hover:not(.active),
 .sort-options a:focus:not(.active)   {
   color: #81b3d2;
-  text-decoration: underline dot #81b3d2;
 }
 .sort-options a:active:not(.active) {
   color: #000000;
@@ -649,11 +671,11 @@ fieldset {
 .sort-options a {
   text-decoration: none;
   color: #cacaca;
-  text-decoration: underline dotted #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
 }
 .sort-options .active {
   color: #81b3d2;
-  text-decoration: none;
+  border-bottom: 0px;
 }
 .up-down {
   text-align: right;
@@ -700,19 +722,18 @@ fieldset {
 }
 .catalog-item img {
   padding: 30px 0;
-  padding-left: 72px;
   padding-right: 31px;
 }
 .name-item {
   margin-top: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 .accommodation-type,
 .price-for-night {
   display: inline-block;
   vertical-align: middle;
   min-width: 111px;
-  margin-bottom: 16.5px;
+  margin-bottom: 17.5px;
 }
 .name-item a {
   text-decoration: none;
@@ -731,6 +752,7 @@ fieldset {
   font-size: 14px;
   line-height: 1.5em;
   font-weight: bold;
+  margin-right: 2px;
 }
 .more {
   text-decoration: none;
@@ -757,25 +779,30 @@ fieldset {
   color: rgba(255, 255, 255, 0.3);
 }
 .stars {
-  margin-right: 74px;
+  margin-right: 2px;
   margin-top: 25px;
   display: inline-block;
   vertical-align: middle;
 }
 .three-stars::before {
-  content: "\2605 \2605 \2605";
-  font-size: 26px;
-  color: #81b3d2;
-}
-.four-stars::before {
-  content: "\2605 \2605 \2605 \2605";
-  font-size: 26px;
-  color: #81b3d2;
+  content: "";
+  width: 18px;
+  height: 19px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image:url("../img/star.png");
+  background-repeat: repeat-x;
+  background-size: 100%;
+  background-position: 0px 0px;
 }
 .two-stars::before {
   content: "\2605 \2605";
   font-size: 26px;
   color: #81b3d2;
+}
+.four-stars {
+  width: 18px;
+  height: 19px;
 }
 .rate {
   display: inline-block;
@@ -850,6 +877,7 @@ fieldset {
 /*------------- Футер для всех страниц ----------- */
 .main-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }

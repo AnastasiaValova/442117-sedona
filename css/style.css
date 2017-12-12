@@ -224,13 +224,13 @@ button {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.option-list li{
+.option-list li {
   width: 33%;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 162px;
 }
-.option-list h3{
+.option-list h3 {
   font-size: 21px;
   font-weight: 700;
   margin-top: 0;
@@ -489,14 +489,12 @@ button {
 .accommodation label::before {
   left: 30px;
 }
-.infrastructure input[type="checkbox"] + label::before,
-.accommodation input[type="checkbox"] + label::before {
+.checkbox + label::before {
   content: url("../img/checkbox-off.svg");
   height: 19px;
   width: 19px;
 }
-.infrastructure  input[type="checkbox"]:checked + label::before,
-.accommodation  input[type="checkbox"]:checked + label::before {
+.checkbox:checked + label::before {
   content: "";
   width: 27px;
   height: 23px;
@@ -507,16 +505,13 @@ button {
   background-size: 100%;
   background-position: 0px 0px;
 }
-.infrastructure input[type="checkbox"]:focus + label::before,
-.accommodation  input[type="checkbox"]:focus + label::before {
+.checkbox:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 }
-.infrastructure  input[type="checkbox"]:disabled + label::before,
-.accommodation  input[type="checkbox"]:disabled + label::before {
+.checkbox:disabled + label::before {
   content: url("../img/checkbox-off-disabled.svg");
 }
-.infrastructure  input[type="checkbox"]:checked:disabled + label::before,
-.accommodation  input[type="checkbox"]:checked:disabled + label::before {
+.checkbox:checked:disabled + label::before {
   content: url("../img/checkbox-on-disabled.svg");
 }
 /*---------- Ползунки на странице отелей ---------*/
@@ -908,7 +903,9 @@ button {
   text-decoration: none;
   color: #000000;
 }
-.twitter, .fb, .youtube {
+.twitter,
+.fb,
+.youtube {
   font-size: 0px;
   background-repeat: no-repeat;
   background-color: #81b3d2;

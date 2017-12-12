@@ -12,10 +12,7 @@ body {
   box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
   min-width: 768px;
   max-width: 1200px;
-  margin: auto;
-}
-ul {
-
+  margin: 0 auto;
 }
 /*-------------- Верхнее меню + логотип --------*/
 .main-navigation {
@@ -118,7 +115,7 @@ ul {
   /*color: #5e4e44;*/
 }
 .features {
-  margin-top: 60px;
+  margin-top: 58px;
   margin-bottom: 53px;
   margin-left: auto;
   margin-right: auto;
@@ -160,6 +157,7 @@ ul {
   width: 66.6%;
   height: 88.5%;
   transform: translateY(-19%);
+  margin-bottom: -300px;
 }
 button {
   font-family: "PT Sans", Arial, sans-serif;
@@ -210,7 +208,7 @@ button {
   width: 438px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
   font-size: 14px;
   line-height: 1.6em;
 }
@@ -283,7 +281,7 @@ button {
   display: flex;
   font-size: 14px;
   line-height: 1.8em;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -337,7 +335,7 @@ button {
   background-color: #81b3d2;
   color: #ffffff;
   padding: 16px 0;
-  margin-top: 28px;
+  margin-top: 24px;
   text-transform: uppercase;
   font-size: 21px;
   line-height: 1.2em;
@@ -434,9 +432,6 @@ button {
 .catalog-form {
   display: flex;
 }
-fieldset {
-/*  border: none;*/
-}
 .catalog-form,
 .result,
 .catalog-item {
@@ -472,14 +467,14 @@ fieldset {
   position: relative;
 }
 .infrastructure label {
-    margin-left: 23px;
+  margin-left: 23px;
 }
 .accommodation label {
-    margin-left: 44px;
+  margin-left: 44px;
 }
 .infrastructure input[type="checkbox"],
 .accommodation input[type="checkbox"] {
-    opacity: 0;
+  opacity: 0;
 }
 .infrastructure label::before,
 .accommodation label::before {
@@ -502,25 +497,27 @@ fieldset {
 }
 .infrastructure  input[type="checkbox"]:checked + label::before,
 .accommodation  input[type="checkbox"]:checked + label::before {
-    content: "";
-    width: 27px;
-    height: 23px;
-    display: inline-block;
-    vertical-align: middle;
-    background-image:url("../img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0px 0px;
+  content: "";
+  width: 27px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px 0px;
 }
 .infrastructure input[type="checkbox"]:focus + label::before,
 .accommodation  input[type="checkbox"]:focus + label::before {
-    outline: rgb(59, 153, 252) auto 5px;
+  outline: rgb(59, 153, 252) auto 5px;
 }
 .infrastructure  input[type="checkbox"]:disabled + label::before,
-.accommodation  input[type="checkbox"]:disabled + label::before,
+.accommodation  input[type="checkbox"]:disabled + label::before {
+  content: url("../img/checkbox-off-disabled.svg");
+}
 .infrastructure  input[type="checkbox"]:checked:disabled + label::before,
 .accommodation  input[type="checkbox"]:checked:disabled + label::before {
-  opacity: 0.3;
+  content: url("../img/checkbox-on-disabled.svg");
 }
 /*---------- Ползунки на странице отелей ---------*/
 .price-controls {
@@ -643,16 +640,14 @@ fieldset {
 }
 .sort-title {
   margin-top: 5px;
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
 }
 .sort-options {
   margin: 0;
   padding-left: 40px;
   list-style: none;
   color: #000000;
-  text-decoration: underline dot #000000;
 }
 .sort-options li {
   display: inline-block;
@@ -669,6 +664,8 @@ fieldset {
   text-decoration: none;
 }
 .sort-options a {
+  line-height: 10px;
+  display: inline-block;
   text-decoration: none;
   color: #cacaca;
   border-bottom: 1px dotted #81b3d2;
@@ -710,9 +707,6 @@ fieldset {
 .up:active {
   border-bottom: 10px solid #81b3d2;
 }
-.stars {
-  text-align: right;
-}
 .variant {
     flex-grow: 1;
 }
@@ -724,6 +718,7 @@ fieldset {
   padding: 30px 0;
   padding-right: 31px;
 }
+
 .name-item {
   margin-top: 26px;
   margin-bottom: 11px;
@@ -779,30 +774,29 @@ fieldset {
   color: rgba(255, 255, 255, 0.3);
 }
 .stars {
-  margin-right: 2px;
-  margin-top: 25px;
-  display: inline-block;
-  vertical-align: middle;
+  margin-top: 29px;
 }
-.three-stars::before {
-  content: "";
-  width: 18px;
-  height: 19px;
-  display: inline-block;
-  vertical-align: middle;
-  background-image:url("../img/star.png");
-  background-repeat: repeat-x;
+.three-stars,
+.four-stars,
+.two-stars {
+  height: 23px;
+  display: block;
+  margin-left: auto;
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0px 0px;
 }
-.two-stars::before {
-  content: "\2605 \2605";
-  font-size: 26px;
-  color: #81b3d2;
+.two-stars {
+  width: 40px;
+  background-image:url("../img/two-stars.png");
+}
+.three-stars {
+  width: 65px;
+  background-image:url("../img/three-stars.png");
 }
 .four-stars {
-  width: 18px;
-  height: 19px;
+  width: 90px;
+  background-image:url("../img/four-stars.png");
 }
 .rate {
   display: inline-block;
@@ -870,7 +864,6 @@ fieldset {
   background-color: rgba(255, 255, 255, 0.9);
   position: relative;
 }
-
 .main-catalog-footer {
   border-top: 1px solid #f2f2f2;
 }
@@ -892,7 +885,7 @@ fieldset {
 .main-footer div {
     width: 33.3%;
     text-align: center;
-    padding: 36px 0;
+    padding: 37px 0;
 }
 .social-nets a:hover,
 .social-nets a:focus {
@@ -941,7 +934,6 @@ fieldset {
   font-size: 14px;
   vertical-align: middle;
   text-align: center;
-/*  background-image: url("../img/logo-htmlacademy.svg");*/
   background-repeat: no-repeat;
   background-position: 0px 0;
   font-size: 0px;

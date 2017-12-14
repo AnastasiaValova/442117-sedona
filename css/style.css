@@ -387,7 +387,6 @@ button {
 .plus:active::after {
   background-color: #81b3d2;
 }
-/*.input-row input[type="number"]*/
 .number {
   width: 38px;
   height: 38px;
